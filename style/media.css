@@ -1,0 +1,45 @@
+/* -------------------------------------MEDIA------------------------------------------ */
+
+@media (max-width: 1300px) {
+    .container{
+        max-width: 90%;
+    }
+}
+@media (max-width: 768px) {
+    header{
+        grid-template-columns: 1fr 2fr 2fr;
+    }
+    .logo{
+        position: relative;
+        left: 0;
+    }
+    .menu-icon{
+        display: block;
+    }
+    .nav{
+        display: none;
+    }
+
+    /* .title-block{
+        position: relative;
+    } */
+    .title-block .photo-slider{
+        position: relative;
+        right: 0;
+        height: 50vh;
+    }
+    .title-block .title-information-block{
+        width: 100%;
+        padding: 5vh 0;
+    }
+
+    .portfolio-block{
+        padding-bottom: 10vh;
+    }
+    .portfolio-block h2{
+        width: 100%;
+    }
+    .portfolio-block .portfolio-wrapper{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
