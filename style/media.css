@@ -42,11 +42,19 @@
         transition: 0.5s;
         font-size: 24px;
     }
-
-    .title-block .photo-slider{
+    .title-photo{
+        display: block;
         position: relative;
         right: 0;
         height: 50vh;
+    }
+    .title-photo img{
+        height: 100%;
+        display: block;
+        margin: auto;
+    }
+    .title-block .slider{
+        display: none;
     }
     .title-block .title-information-block{
         width: 100%;
@@ -80,9 +88,12 @@
         align-items: center;
         padding: 4vh 0 3vh 0;
     }
+    .footer h2{
+        font-size: 36px;
+    }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 426px) {
     header{
         height: 65px;
     }
@@ -90,6 +101,9 @@
         top: 50px;
     }
 
+    .title-photo img{
+        width: 100%;
+    }
     .title-block .title-information-block h1, .portfolio-block h2, .form h2, .footer h2{
         font-size: 36px;
     }
@@ -111,7 +125,7 @@
         font-size: 36px;
     }
     .footer .footer-nav{
-        grid-auto-flow: unset;
+        grid-auto-flow: initial;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 20px;
     }
