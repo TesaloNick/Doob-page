@@ -15,14 +15,34 @@
     }
     .menu-icon{
         display: block;
+        z-index: 3;
     }
     .nav{
         display: none;
     }
+    .menu-icon:hover + .nav, .nav:hover{
+        display: block;
+        position: absolute;
+        top: 58px;
+        width: 100%;
+        z-index: 2;
+        background-color: white;
+        transition: 0.5s;
+        font-size: 24px;
+    }
+    .menu-icon:hover + .nav > ul, .nav:hover > ul{
+        flex-direction: column;        
+        transition: 0.5s;
+        font-size: 24px;
+    }
+    .menu-icon:hover + .nav > ul li, .nav:hover > ul li{
+        text-align: center;
+        height: 60px;
+        padding-top: 15px;
+        transition: 0.5s;
+        font-size: 24px;
+    }
 
-    /* .title-block{
-        position: relative;
-    } */
     .title-block .photo-slider{
         position: relative;
         right: 0;
@@ -32,7 +52,10 @@
         width: 100%;
         padding: 5vh 0;
     }
-
+    .title-block .title-information-block h1{
+        font-size: 48px;
+    }
+    
     .portfolio-block{
         padding-bottom: 10vh;
     }
@@ -41,5 +64,67 @@
     }
     .portfolio-block .portfolio-wrapper{
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .form form{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .form form .form-message-text, .form form .form-button{
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 4vh 0 3vh 0;
+    }
+}
+
+@media (max-width: 425px) {
+    header{
+        height: 65px;
+    }
+    .menu-icon:hover + .nav, .nav:hover{
+        top: 50px;
+    }
+
+    .title-block .title-information-block h1, .portfolio-block h2, .form h2, .footer h2{
+        font-size: 36px;
+    }
+    .title-block .title-information-block .title-buttons .title-button-active{
+        width: 160px;
+    }
+    .title-block .title-information-block .title-buttons .title-button-passive{
+        padding-left: 3vw;
+    }
+    .right-nav .contact-button{
+        display: none;
+    }
+
+    .portfolio-block .portfolio-wrapper{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .footer h2{
+        font-size: 36px;
+    }
+    .footer .footer-nav{
+        grid-auto-flow: unset;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+    .footer .footer-nav li{
+        text-align: center;
+    }
+    .footer .footer-nav li:last-of-type{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+}
+@media (max-width: 370px) {
+    .footer h2{
+        font-size: 30px;
     }
 }

@@ -12,6 +12,7 @@ header{
     position: relative;
     display: grid;
     grid-template-columns: 3fr 1fr;
+    grid-gap: 20px;
     align-items: center;
     padding: 2vw 0;
 }
@@ -21,7 +22,6 @@ header{
     width: 69px;
     height: 30px;
     background-image: url(./../img/Logo.png);
-    background-size: cover;
     cursor: pointer;
 }
 .menu-icon{
@@ -34,7 +34,6 @@ header{
 }
 .nav ul{
     display: flex;
-    /* align-items: center; */
     list-style-type: none;
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
@@ -79,6 +78,10 @@ header{
     cursor: pointer;
     outline: 0;
     background: url(./../img/Arrow\ Down.png) no-repeat right center;
+}
+.right-nav .select-lang-block .select-lang option{
+    font-weight: bold;
+    color: rgb(49, 69, 132);
 }
 .right-nav .contact-button{
     padding: 20px 0;
@@ -130,7 +133,6 @@ header{
     font-size: 73px;
     color: rgb(49, 69, 132);
     font-weight: bold;
-    /* cursor: pointer; */
 }
 .title-block .title-information-block p{
     font-family: 'Open Sans', sans-serif;
@@ -167,7 +169,6 @@ header{
     transition: 0.7s;
     border: 0px;
 }
-
 .title-block .title-information-block .title-buttons .title-button-passive{
     color: rgb(49, 69, 132);
     transition: 0.3s;
@@ -270,7 +271,7 @@ header{
 .form form{
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(2. 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 32px;
 }
 .form form .form-message-text, .form form .form-button{
