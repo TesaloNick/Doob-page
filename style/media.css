@@ -100,9 +100,12 @@
     .menu-icon:hover + .nav, .nav:hover{
         top: 50px;
     }
-
     .title-photo img{
         width: 100%;
+        height: auto;
+    }
+    .title-photo{
+        height: auto;
     }
     .title-block .title-information-block h1, .portfolio-block h2, .form h2, .footer h2{
         font-size: 36px;
